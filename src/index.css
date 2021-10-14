@@ -1,0 +1,112 @@
+body {
+	margin: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color: #888;
+	font-size: 16px;
+}
+body, button  { font-family: 'Roboto Condensed', sans-serif; font-size: 16px; } 
+code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
+
+#root::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  z-index: -1;
+  background: no-repeat url("./back.png") top center;
+}
+
+header { 
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+header > * { flex-basis: 100% }
+.backbuttonWrapper { font-size: 13px }
+.backbutton { padding-left: 3rem; color: #fff7ce; cursor: pointer }
+h2 { text-align: center; margin: 0; line-height: 62px; color: #fff; width: 832px; font-size: 34px; margin-top: 0.2rem }
+.info { font-size: 22px }
+
+.filterWrapper { display: flex; justify-content: space-between; width: 1250px; margin: 0 auto; height: 174px }
+	.counter { padding-top: 107px; flex-basis: 30%}
+	.counterText { display: flex; align-items: center; line-height: 26px }
+	.mapsShowed { font-weight: bold; color: #fff }
+	.filterReset { display: inline-block; width: 26px; height: 26px; background: no-repeat url("./reset.png"); cursor: pointer }
+	.counter_highlight { position: relative; top: -22px; left: 42px; z-index: -1 }
+	
+	.excluded { width: 246px; display: flex; justify-content: space-between }
+	.excludedMap { width: 100px; position: relative }
+	.excludedMap img { width: 76px; margin: 10px 10px 5px; border: 2px solid #ba7028; border-radius: 5px }
+	.mapreset { position: absolute; top: 0; right: 0; width: 20px; height: 20px; background-image: url("./reset.png"); background-size: contain; cursor: pointer }
+
+	.filter { display: flex; justify-content: flex-end; align-items: center; padding-top: 66px; padding-right: 3px; flex-basis: 30%}
+	.filterItem { margin-left: 6px; width: 30px } 
+
+.maplistWrapper { height: 485px; position: relative; overflow: hidden;  }
+.maplist {
+	margin: 0 auto;
+	width: 1250px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	max-height: 485px;
+	position: relative;
+	transition: top 0.3s;
+}
+
+.mapblock {
+	position: relative;
+	width: 226px;
+	height: 226px; 
+	margin: 0 25px 25px 0;
+	border: 2px solid #444;
+	border-radius: 5px
+}
+
+.mapname {
+	position: absolute;
+	bottom: 12px;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+}
+.mapimage {	width: 100% }
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100% }
+.maphover { display: flex; flex-direction: column; align-items: center; justify-content: space-between}
+.maphoverbg { opacity: 0.5; background-color: #000; z-index: 0}
+.maphovertext { color: #fff; text-align: center; z-index: 1 }
+.maphoverbutton, .modalbuttons button {
+	background: rgb(0,221,0);
+	background: linear-gradient(180deg, rgba(0,221,0,1) 0%, rgba(6,87,0,1) 100%); 
+	color: #fff;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 2px 10px;
+	font-size: 16px;
+	cursor: pointer;
+	text-shadow: 2px 2px 2px #000;
+	margin: 0 20px;
+	width: 100px;
+}
+.maphoverbuttonwrapper { flex-basis: 15%; z-index: 1 }
+
+.modalwrapper { z-index: 1 }
+.modalbg { opacity: 0.5; background-color: #888 }
+.modal { width: 30vw; height: 30vh; background-color: #222; position: absolute; top: 32vh; left: 35vw; border-radius: 10px; border: 2px solid #ba7028; display: flex; flex-direction: column; align-items: center; justify-content: space-between }
+.modaltext { flex-basis: 40%; font-size: 20px; color: #fff; text-align: center; line-height: 40px}
+.modalbuttons { flex-basis: 20% }
+
+.scrollbar { height: 485px; width: 0px; border: 1px solid #444; position: absolute; top: 0; right: 5px }
+.slider { background: no-repeat url("./slider.png"); position: absolute; left: -8px; width: 15px; height: 35px; transition: top 0.3s; }
+
+
+
+
+
+
